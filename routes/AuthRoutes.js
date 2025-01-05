@@ -1,42 +1,3 @@
-// import express from "express";
-
-// import ForgetPasswordController from "../controllers/ForgetPasswordController.js"; // Assuming .mjs extension for ESM
-
-// import authController from "../controllers/AuthController.js"; // Assuming .mjs extension for ESM
-
-// import ZakatController from "../controllers/ZakatController.js"; // Assuming .mjs extension for ESM
-
-// import { verifyAndAuth } from "../middleware/verifyToken.js"; // Assuming .mjs extension for ESM
-// const router = express.Router();
-
-// router.post('/Admin/signup', authController.signup_Amdin);//ok
-// router.post('/User/signup', authController.signup_User);//ok
-// router.post('/livreur/signup', authController.signup_Livreur);//ok
-
-// router.put('/setCurrentLocationforDelivery', authController.setCurrentLocationforDelivery);
-// router.post("/Check_Google_Login", authController.Check_Google_Login);
-
-// router.post("/login", authController.login);//ok
-// router.post("/admin/login", authController.loginAdmin);//ok
-// router.post("/livreur/Login", authController.livreurLogin);
-
-// router.post("/forgetPwd", ForgetPasswordController.forgetPwd);//ok
-// router.post("/forgetPwdSms", ForgetPasswordController.forgot_password_sms);
-
-
-// router.post("/otp", verifyAndAuth, ForgetPasswordController.otp);
-// router.post("/newPwd", verifyAndAuth, ForgetPasswordController.newPwd);
-
-
-
-// //------------------------------
-// router.post('/individual/setTransaction', ZakatController.addTransaction);
-// router.get('/individual/getHistorique', ZakatController.recalculateTotals);
-
-
-// export default router;
-
-
 import express from "express";
 import ForgetPasswordController from "../controllers/ForgetPasswordController.js";
 import authController from "../controllers/AuthController.js";
@@ -51,11 +12,17 @@ const router = express.Router();
  *     User:
  *       type: object
  *       properties:
- *         email: 
+ *         email:
  *           type: string
  *         password:
  *           type: string
- *         name:
+ *         username:
+ *           type: string
+ *         firstName:
+ *           type: string
+ *         lastName:
+ *           type: string
+ *         phoneNumber:
  *           type: string
  *   securitySchemes:
  *     bearerAuth:
@@ -82,7 +49,7 @@ const router = express.Router();
  *       400:
  *         description: Invalid input
  */
-router.post('/Admin/signup', authController.signup_Amdin);
+router.post("/Admin/signup", authController.signup_Amdin);
 
 /**
  * @swagger
@@ -100,7 +67,7 @@ router.post('/Admin/signup', authController.signup_Amdin);
  *       201:
  *         description: User registered successfully
  */
-router.post('/User/signup', authController.signup_User);
+router.post("/User/signup", authController.signup_User);
 
 /**
  * @swagger
@@ -118,7 +85,7 @@ router.post('/User/signup', authController.signup_User);
  *       201:
  *         description: Delivery person registered successfully
  */
-router.post('/livreur/signup', authController.signup_Livreur);
+router.post("/livreur/signup", authController.signup_Livreur);
 
 /**
  * @swagger
@@ -140,7 +107,10 @@ router.post('/livreur/signup', authController.signup_Livreur);
  *               longitude:
  *                 type: number
  */
-router.put('/setCurrentLocationforDelivery', authController.setCurrentLocationforDelivery);
+router.put(
+  "/setCurrentLocationforDelivery",
+  authController.setCurrentLocationforDelivery
+);
 
 /**
  * @swagger

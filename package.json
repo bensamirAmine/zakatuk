@@ -1,7 +1,7 @@
 {
-  "name": "cazador-back",
+  "name": "zakatuk-back",
   "version": "1.0.0",
-  "description": "Cazador backend",
+  "description": "zakatuk backend",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -11,18 +11,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CazadorApp/Cazador-Backend.git"
+    "url": "git+https://github.com/zakatukApp/zakatuk-Backend.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CazadorApp/Cazador-Backend/issues"
+    "url": "https://github.com/zakatukApp/zakatuk-Backend/issues"
   },
-  "homepage": "https://github.com/CazadorApp/Cazador-Backend#readme",
+  "homepage": "https://github.com/zakatukApp/zakatuk-Backend#readme",
   "dependencies": {
     "bad-words": "^3.0.4",
     "bcrypt": "^5.1.1",
-    "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",

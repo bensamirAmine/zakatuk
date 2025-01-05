@@ -1,4 +1,7 @@
 /node_modules
 /public
 .env
+.env.dev
+.env.prod
+.env.staging
 package-lock.json
